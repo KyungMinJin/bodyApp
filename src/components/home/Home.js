@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, View, StyleSheet, Image} from 'react-native';
+import {Button, View, StyleSheet, Image, TouchableOpacity} from 'react-native';
 import p1 from '../../images/그림1.png';
 import p2 from '../../images/그림2.png';
 import p3 from '../../images/그림3.png';
@@ -14,22 +14,30 @@ const Home = ({navigation}) => {
     <View style={styles.Homes}>
       <Image style={styles.logo} source={p1} />
       <View style={styles.menu}>
-        <Image style={styles.logo} source={p2} />
+        <TouchableOpacity onPress={() => navigation.navigate('Guide')}>
+          <Image style={styles.logo} source={p2} />
+        </TouchableOpacity>
         <View style={styles.innerMenu}>
-          <Image style={styles.logo} source={p3} />
-          <Image style={styles.logo} source={p4} />
-          <Image style={styles.logo} source={p5} />
-
-          <Image style={styles.logo} source={p6} />
-          <Image style={styles.logo} source={p7} />
-          <Image style={styles.logo} source={p8} />
+          <TouchableOpacity onPress={() => navigation.navigate('Bone')}>
+            <Image style={styles.logo} source={p3} />
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('Digest')}>
+            <Image style={styles.logo} source={p4} />
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('Breate')}>
+            <Image style={styles.logo} source={p5} />
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('Breate')}>
+            <Image style={styles.logo} source={p6} />
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('Breate')}>
+            <Image style={styles.logo} source={p7} />
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('Breate')}>
+            <Image style={styles.logo} source={p8} />
+          </TouchableOpacity>
         </View>
       </View>
-
-      {/* <Button
-        title="Go to Profile"
-        onPress={() => navigation.navigate('Bone')}
-      /> */}
     </View>
   );
 };
@@ -40,7 +48,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   Homes: {
-    backgroundColor: '#fff',
+    backgroundColor: '#FFF2CC',
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
