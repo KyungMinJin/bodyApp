@@ -1,7 +1,5 @@
 import React from 'react';
 import {View, StyleSheet, Image, TouchableOpacity} from 'react-native';
-import p1 from '../../images/그림1.png';
-import p2 from '../../images/그림2.png';
 import p3 from '../../images/그림3.png';
 import p4 from '../../images/그림4.png';
 import p5 from '../../images/그림5.png';
@@ -48,7 +46,7 @@ const styles = StyleSheet.create({
   },
   menu: {
     width: '60%',
-    marginBottom: 30,
+    marginTop: 50,
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
