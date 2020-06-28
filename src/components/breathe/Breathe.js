@@ -1,26 +1,53 @@
 import React from 'react';
-import {Button, View, StyleSheet, Image} from 'react-native';
-import p15 from '../../images/그림15.png';
+import {View, StyleSheet, Image, TouchableOpacity} from 'react-native';
+import p15 from '../../images/그림68.png';
+import p67 from '../../images/그림67.png';
 import p11 from '../../images/그림11.png';
 import p12 from '../../images/그림12.png';
-import p16 from '../../images/그림16.png';
-import p17 from '../../images/그림17.png';
-import p18 from '../../images/그림18.png';
-import p19 from '../../images/그림19.png';
-import {TouchableOpacity} from 'react-native-gesture-handler';
+import p16 from '../../images/그림70.png';
+import p18 from '../../images/그림69.png';
+import p17 from '../../images/그림71.png';
+import p19 from '../../images/그림72.png';
 import Tab from '../common/Tab';
 const Breathe = ({navigation}) => {
+  const handlePress = (evt) => {
+    const x = evt.nativeEvent.locationX;
+    const y = evt.nativeEvent.locationY;
+    // 코
+    if (x > 255 && x < 356 && y > 163 && y < 223) {
+      navigation.navigate('Breathe');
+    }
+    //기관
+    else if (x > 311 && x < 375 && y > 243 && y < 470) {
+      navigation.navigate('Breathe2');
+    }
+    //기관지
+    else if (x > 257 && x < 489 && y > 401 && y < 502) {
+      navigation.navigate('Breathe3');
+    }
+    // 폐
+    else if (x > 203 && y > 374 && x < 520 && y < 740) {
+      navigation.navigate('Breathe4');
+    }
+
+    console.log(
+      `x coord = ${evt.nativeEvent.locationX} ycoord = ${evt.nativeEvent.locationY}`,
+    );
+  };
   return (
     <View style={styles.homes}>
       <View style={styles.main}>
         <View style={styles.back}>
-          <Image source={p15} style={styles.ui} />
+          <TouchableOpacity onPress={(evt) => handlePress(evt)}>
+            <Image source={p15} style={styles.ui} />
+            <Image source={p67} style={{marginTop: -600, marginLeft: 30}} />
+          </TouchableOpacity>
           <View>
-            <TouchableOpacity>
-              <Image source={p11} style={styles.video} />
+            <TouchableOpacity style={styles.video}>
+              <Image source={p11} />
             </TouchableOpacity>
-            <TouchableOpacity>
-              <Image source={p12} style={styles.vr} />
+            <TouchableOpacity style={styles.vr}>
+              <Image source={p12} />
             </TouchableOpacity>
           </View>
         </View>
@@ -28,11 +55,9 @@ const Breathe = ({navigation}) => {
         <View style={styles.back2}>
           <Image source={p16} style={styles.balloonInner} />
           <View style={{flexDirection: 'row'}}>
-            <TouchableOpacity onPress={() => navigation.navigate('Bone2')}>
-              <Image source={p17} />
-            </TouchableOpacity>
+            <Image source={p18} />
             <View>
-              <Image source={p18} />
+              <Image source={p17} />
               <Image source={p19} style={{resizeMode: 'contain', width: 400}} />
             </View>
           </View>
@@ -50,14 +75,14 @@ const styles = StyleSheet.create({
     bottom: 330,
   },
   back: {
-    backgroundColor: '#ec7728',
-    width: '50%',
-    margin: 30,
+    backgroundColor: '#ec7093',
     flexDirection: 'row',
     borderRadius: 100,
+    margin: 30,
+    width: '50%',
   },
   back2: {
-    borderColor: '#ec7728',
+    borderColor: '#ec7093',
     borderWidth: 20,
     backgroundColor: '#ffe699',
     width: '50%',
@@ -67,15 +92,36 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   video: {
+    marginLeft: -150,
     marginTop: 350,
   },
   vr: {
-    marginLeft: 10,
+    marginLeft: -140,
   },
   ui: {
-    marginTop: 80,
-    marginLeft: 20,
-    marginRight: 10,
+    width: 794,
+    height: 794,
+    marginRight: -40,
+  },
+  ui2: {
+    resizeMode: 'contain',
+    height: 300,
+    width: 300,
+  },
+  ui3: {
+    resizeMode: 'contain',
+    height: 300,
+    width: 230,
+  },
+  ui4: {
+    resizeMode: 'contain',
+    height: 300,
+    width: 300,
+  },
+  ui6: {
+    resizeMode: 'contain',
+    height: 280,
+    width: 280,
   },
   homes: {
     backgroundColor: '#FFF2CC',
