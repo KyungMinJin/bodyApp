@@ -19,6 +19,12 @@ import Bone3 from './src/components/bone/Bone3';
 import Bone4 from './src/components/bone/Bone4';
 import Bone5 from './src/components/bone/Bone5';
 import Bone6 from './src/components/bone/Bone6';
+import Digest2 from './src/components/digest/Digest2';
+import Digest3 from './src/components/digest/Digest3';
+import Digest4 from './src/components/digest/Digest4';
+import Digest5 from './src/components/digest/Digest5';
+import Digest6 from './src/components/digest/Digest6';
+import Digest7 from './src/components/digest/Digest7';
 
 const Stack = createStackNavigator();
 
@@ -28,6 +34,12 @@ function MainStack() {
       <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="Guide" component={Guide} />
       <Stack.Screen name="Digest" component={Digest} />
+      <Stack.Screen name="Digest2" component={Digest2} />
+      <Stack.Screen name="Digest3" component={Digest3} />
+      <Stack.Screen name="Digest4" component={Digest4} />
+      <Stack.Screen name="Digest5" component={Digest5} />
+      <Stack.Screen name="Digest6" component={Digest6} />
+      <Stack.Screen name="Digest7" component={Digest7} />
       <Stack.Screen name="Bone" component={Bone} />
       <Stack.Screen name="Bone2" component={Bone2} />
       <Stack.Screen name="Bone3" component={Bone3} />
