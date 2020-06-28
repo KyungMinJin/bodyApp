@@ -1,15 +1,15 @@
 import React from 'react';
-import {Button, View, StyleSheet, Image} from 'react-native';
+import {View, StyleSheet, Image} from 'react-native';
 import p15 from '../../images/그림15.png';
 import p11 from '../../images/그림11.png';
 import p12 from '../../images/그림12.png';
-import p16 from '../../images/그림16.png';
-import p17 from '../../images/그림17.png';
-import p18 from '../../images/그림18.png';
-import p19 from '../../images/그림19.png';
+import p16 from '../../images/그림32.png';
+import p23 from '../../images/그림33.png';
+import p18 from '../../images/그림34.png';
+import p19 from '../../images/그림35.png';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import Tab from '../common/Tab';
-const Bone = ({navigation}) => {
+const Bone6 = ({navigation}) => {
   return (
     <View style={styles.homes}>
       <View style={styles.main}>
@@ -28,12 +28,11 @@ const Bone = ({navigation}) => {
         <View style={styles.back2}>
           <Image source={p16} style={styles.balloonInner} />
           <View style={{flexDirection: 'row'}}>
-            <TouchableOpacity onPress={() => navigation.navigate('Bone2')}>
-              <Image source={p17} />
+            <TouchableOpacity onPress={() => navigation.navigate('Bone6')}>
+              <Image source={p23} style={{resizeMode: 'contain', width: 500}} />
             </TouchableOpacity>
-            <View>
+            <View style={{marginLeft: 10}}>
               <Image source={p18} />
-              <Image source={p19} style={{resizeMode: 'contain', width: 400}} />
             </View>
           </View>
         </View>
@@ -98,4 +97,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Bone;
+export default Bone6;
