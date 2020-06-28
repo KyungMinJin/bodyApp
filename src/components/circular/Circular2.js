@@ -5,11 +5,11 @@ import p67 from '../../images/그림67.png';
 import p11 from '../../images/그림11.png';
 import p12 from '../../images/그림12.png';
 import p16 from '../../images/그림82.png';
-import p18 from '../../images/그림83.png';
-import p17 from '../../images/그림84.png';
-import p19 from '../../images/그림85.png';
+import p18 from '../../images/그림89.png';
+import p17 from '../../images/그림87.png';
+import p19 from '../../images/그림88.png';
 import Tab from '../common/Tab';
-const Circular = ({navigation}) => {
+const Circular2 = ({navigation}) => {
   const handlePress = (evt) => {
     const x = evt.nativeEvent.locationX;
     const y = evt.nativeEvent.locationY;
@@ -32,7 +32,6 @@ const Circular = ({navigation}) => {
         <View style={styles.back}>
           <TouchableOpacity onPress={(evt) => handlePress(evt)}>
             <Image source={p15} style={styles.ui} />
-            <Image source={p67} style={{marginTop: -600, marginLeft: 30}} />
           </TouchableOpacity>
           <View>
             <TouchableOpacity style={styles.video}>
@@ -52,12 +51,14 @@ const Circular = ({navigation}) => {
               style={{
                 resizeMode: 'contain',
                 width: 150,
-                marginLeft: 160,
-                marginRight: -150,
+                marginRight: 100,
               }}
             />
             <View>
-              <Image source={p17} style={{resizeMode: 'contain', width: 850}} />
+              <Image
+                source={p17}
+                style={{resizeMode: 'contain', height: 350}}
+              />
             </View>
           </View>
           <Image source={p19} style={{resizeMode: 'contain', width: 550}} />
@@ -146,4 +147,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Circular;
+export default Circular2;

@@ -33,7 +33,7 @@ const Home = ({navigation}) => {
           <TouchableOpacity onPress={() => navigation.navigate('Breate')}>
             <Image style={styles.logo} source={p7} />
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => navigation.navigate('Breate')}>
+          <TouchableOpacity onPress={() => navigation.navigate('Circular')}>
             <Image style={styles.logo} source={p8} />
           </TouchableOpacity>
         </View>

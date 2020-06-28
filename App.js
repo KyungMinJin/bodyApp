@@ -19,6 +19,7 @@ import Bone3 from './src/components/bone/Bone3';
 import Bone4 from './src/components/bone/Bone4';
 import Bone5 from './src/components/bone/Bone5';
 import Bone6 from './src/components/bone/Bone6';
+import Circular2 from './src/components/circular/Circular2';
 
 const Stack = createStackNavigator();
 
@@ -36,6 +37,7 @@ function MainStack() {
       <Stack.Screen name="Bone6" component={Bone6} />
       <Stack.Screen name="Breathe" component={Breathe} />
       <Stack.Screen name="Circular" component={Circular} />
+      <Stack.Screen name="Circular2" component={Circular2} />
       <Stack.Screen name="Excert" component={Excert} />
       <Stack.Screen name="Percept" component={Percept} />
     </Stack.Navigator>
