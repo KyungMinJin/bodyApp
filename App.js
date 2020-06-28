@@ -25,6 +25,9 @@ import Digest4 from './src/components/digest/Digest4';
 import Digest5 from './src/components/digest/Digest5';
 import Digest6 from './src/components/digest/Digest6';
 import Digest7 from './src/components/digest/Digest7';
+import Breathe2 from './src/components/breathe/Breathe2';
+import Breathe3 from './src/components/breathe/Breathe3';
+import Breathe4 from './src/components/breathe/Breathe4';
 
 const Stack = createStackNavigator();
 
@@ -47,6 +50,9 @@ function MainStack() {
       <Stack.Screen name="Bone5" component={Bone5} />
       <Stack.Screen name="Bone6" component={Bone6} />
       <Stack.Screen name="Breathe" component={Breathe} />
+      <Stack.Screen name="Breathe2" component={Breathe2} />
+      <Stack.Screen name="Breathe3" component={Breathe3} />
+      <Stack.Screen name="Breathe4" component={Breathe4} />
       <Stack.Screen name="Circular" component={Circular} />
       <Stack.Screen name="Excert" component={Excert} />
       <Stack.Screen name="Percept" component={Percept} />
