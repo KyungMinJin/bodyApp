@@ -33,8 +33,7 @@ const Guide = ({navigation}) => {
         </View>
       </View>
 
-      {/* <Button title="Go to Home" onPress={() => navigation.navigate('Home')} /> */}
-      <Tab />
+      <Tab navigation={navigation} />
     </View>
   );
 };

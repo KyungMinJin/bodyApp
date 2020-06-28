@@ -1,7 +1,5 @@
 import React from 'react';
 import {View, StyleSheet, Image, TouchableOpacity} from 'react-native';
-import p1 from '../../images/그림1.png';
-import p2 from '../../images/그림2.png';
 import p3 from '../../images/그림3.png';
 import p4 from '../../images/그림4.png';
 import p5 from '../../images/그림5.png';
