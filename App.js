@@ -19,6 +19,7 @@ import Bone3 from './src/components/bone/Bone3';
 import Bone4 from './src/components/bone/Bone4';
 import Bone5 from './src/components/bone/Bone5';
 import Bone6 from './src/components/bone/Bone6';
+import Percept2 from './src/components/percept/Percept2';
 
 const Stack = createStackNavigator();
 
@@ -38,6 +39,7 @@ function MainStack() {
       <Stack.Screen name="Circular" component={Circular} />
       <Stack.Screen name="Excert" component={Excert} />
       <Stack.Screen name="Percept" component={Percept} />
+      <Stack.Screen name="Percept2" component={Percept2} />
     </Stack.Navigator>
   );
 }
