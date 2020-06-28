@@ -1,20 +1,13 @@
 import React from 'react';
-import {Button, View, StyleSheet, Image, TouchableOpacity} from 'react-native';
+import {View, StyleSheet, Image, TouchableOpacity} from 'react-native';
 import p15 from '../../images/그림120.png';
-// import p15 from '../../images/그림119.png';
 import p11 from '../../images/그림11.png';
 import p12 from '../../images/그림12.png';
 import p16 from '../../images/그림39.png';
-import p17 from '../../images/그림41.png';
-import p36 from '../../images/그림36.png';
-import p50 from '../../images/그림50.png';
-import p54 from '../../images/그림54.png';
-import p58 from '../../images/그림58.png';
-import p35 from '../../images/그림35.png';
-import p18 from '../../images/그림40.png';
-import p19 from '../../images/그림42.png';
-import p43 from '../../images/그림43.png';
-import {TouchableHighlight} from 'react-native-gesture-handler';
+import p18 from '../../images/그림53.png';
+import p17 from '../../images/그림54.png';
+import p19 from '../../images/그림55.png';
+import p43 from '../../images/그림56.png';
 import Tab from '../common/Tab';
 const Digest = ({navigation}) => {
   const handlePress = (evt) => {
@@ -75,7 +68,7 @@ const Digest = ({navigation}) => {
           <View style={{flexDirection: 'row'}}>
             <Image source={p18} />
             <View>
-              <Image source={p17} />
+              <Image source={p17} style={{resizeMode: 'contain', width: 450}} />
               <Image source={p19} style={{resizeMode: 'contain', width: 400}} />
             </View>
           </View>
