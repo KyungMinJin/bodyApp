@@ -3,10 +3,11 @@ import {View, StyleSheet, Image, TouchableOpacity} from 'react-native';
 import p15 from '../../images/그림1111.png';
 import p11 from '../../images/그림11.png';
 import p12 from '../../images/그림12.png';
-import p16 from '../../images/그림100.png';
-import p17 from '../../images/그림101.png';
+import p16 from '../../images/그림104.png';
+import p17 from '../../images/그림102.png';
+import p103 from '../../images/그림103.png';
 import Tab from '../common/Tab';
-const Percept = ({navigation}) => {
+const Percept2 = ({navigation}) => {
   const handlePress = (evt) => {
     const x = evt.nativeEvent.locationX;
     const y = evt.nativeEvent.locationY;
@@ -43,17 +44,25 @@ const Percept = ({navigation}) => {
         <View style={styles.back2}>
           <Image source={p16} style={styles.balloonInner} />
           <View style={{flexDirection: 'row'}}>
-            <View>
-              <Image
-                source={p17}
-                style={{
-                  resizeMode: 'contain',
-                  marginTop: -230,
-                  width: 600,
-                  height: 650,
-                }}
-              />
-            </View>
+            <Image
+              source={p17}
+              style={{
+                resizeMode: 'contain',
+                marginTop: -130,
+                marginLeft: -100,
+                width: 600,
+                height: 600,
+              }}
+            />
+            <Image
+              source={p103}
+              style={{
+                resizeMode: 'contain',
+                marginLeft: -130,
+                width: 300,
+                height: 350,
+              }}
+            />
           </View>
         </View>
       </View>
@@ -97,6 +106,27 @@ const styles = StyleSheet.create({
     width: 794,
     height: 794,
   },
+  ui2: {
+    resizeMode: 'contain',
+    height: 400,
+    marginLeft: 50,
+    width: 500,
+  },
+  ui3: {
+    resizeMode: 'contain',
+    height: 300,
+    width: 230,
+  },
+  ui4: {
+    resizeMode: 'contain',
+    height: 300,
+    width: 300,
+  },
+  ui6: {
+    resizeMode: 'contain',
+    height: 280,
+    width: 280,
+  },
   homes: {
     backgroundColor: '#FFF2CC',
     flex: 1,
@@ -118,4 +148,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Percept;
+export default Percept2;

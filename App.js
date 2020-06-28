@@ -18,6 +18,7 @@ import Bone3 from './src/components/bone/Bone3';
 import Bone4 from './src/components/bone/Bone4';
 import Bone5 from './src/components/bone/Bone5';
 import Bone6 from './src/components/bone/Bone6';
+import Percept2 from './src/components/percept/Percept2';
 import Excret from './src/components/excret/Excret';
 import Excret2 from './src/components/excret/Excret2';
 import Circular2 from './src/components/circular/Circular2';
@@ -61,6 +62,7 @@ function MainStack() {
       <Stack.Screen name="Circular2" component={Circular2} />
       <Stack.Screen name="Excert" component={Excert} />
       <Stack.Screen name="Percept" component={Percept} />
+      <Stack.Screen name="Percept2" component={Percept2} />
     </Stack.Navigator>
   );
 }
