@@ -68,7 +68,7 @@ const Excret = ({navigation}) => {
         </View>
       </View>
 
-      <Tab navigation={navigation} style={styles.tab} active="Bone" />
+      <Tab navigation={navigation} style={styles.tab} active="Excret" />
     </View>
   );
 };

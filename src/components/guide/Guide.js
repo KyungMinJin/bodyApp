@@ -60,12 +60,12 @@ const styles = StyleSheet.create({
   video: {
     position: 'absolute',
     left: 650,
-    bottom: 150,
+    bottom: 210,
   },
   vr: {
     position: 'absolute',
     left: 660,
-    bottom: -30,
+    bottom: 30,
   },
   ui: {
     position: 'absolute',

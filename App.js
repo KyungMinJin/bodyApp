@@ -60,7 +60,6 @@ function MainStack() {
       <Stack.Screen name="Excret" component={Excret} />
       <Stack.Screen name="Excret2" component={Excret2} />
       <Stack.Screen name="Circular2" component={Circular2} />
-      <Stack.Screen name="Excert" component={Excert} />
       <Stack.Screen name="Percept" component={Percept} />
       <Stack.Screen name="Percept2" component={Percept2} />
     </Stack.Navigator>

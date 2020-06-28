@@ -22,35 +22,35 @@ const Tab = ({navigation, active}) => {
         ) : (
           <View />
         )}
-        {active !== '' ? (
+        {active !== 'Digest' ? (
           <TouchableOpacity onPress={() => navigation.navigate('Digest')}>
             <Image style={styles.logo} source={p4} />
           </TouchableOpacity>
         ) : (
           <View />
         )}
-        {active !== '' ? (
-          <TouchableOpacity onPress={() => navigation.navigate('Breate')}>
+        {active !== 'Breathe' ? (
+          <TouchableOpacity onPress={() => navigation.navigate('Breathe')}>
             <Image style={styles.logo} source={p5} />
           </TouchableOpacity>
         ) : (
           <View />
         )}
-        {active !== '' ? (
+        {active !== 'Circular' ? (
           <TouchableOpacity onPress={() => navigation.navigate('Circular')}>
             <Image style={styles.logo} source={p6} />
           </TouchableOpacity>
         ) : (
           <View />
         )}
-        {active !== '' ? (
+        {active !== 'Excret' ? (
           <TouchableOpacity onPress={() => navigation.navigate('Excret')}>
             <Image style={styles.logo} source={p7} />
           </TouchableOpacity>
         ) : (
           <View />
         )}
-        {active !== '' ? (
+        {active !== 'Percept' ? (
           <TouchableOpacity onPress={() => navigation.navigate('Percept')}>
             <Image style={styles.logo} source={p8} />
           </TouchableOpacity>

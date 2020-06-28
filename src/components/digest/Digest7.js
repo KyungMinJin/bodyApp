@@ -75,7 +75,7 @@ const Digest = ({navigation}) => {
         </View>
       </View>
 
-      <Tab navigation={navigation} style={styles.tab} active="Bone" />
+      <Tab navigation={navigation} style={styles.tab} active="Digest" />
     </View>
   );
 };
