@@ -1,14 +1,15 @@
 import React from 'react';
-import {View, StyleSheet, Image, TouchableOpacity} from 'react-native';
+import {TouchableOpacity, View, StyleSheet, Image} from 'react-native';
 import p15 from '../../images/그림15.png';
 import p11 from '../../images/그림11.png';
 import p12 from '../../images/그림12.png';
 import p16 from '../../images/그림16.png';
-import p17 from '../../images/그림17.png';
-import p18 from '../../images/그림18.png';
-import p19 from '../../images/그림19.png';
+import p20 from '../../images/그림20.png';
+import p18 from '../../images/그림21.png';
+import p19 from '../../images/그림22.png';
+
 import Tab from '../common/Tab';
-const Bone = ({navigation}) => {
+const Bone2 = ({navigation}) => {
   const handlePress = (evt) => {
     const x = evt.nativeEvent.locationX;
     const y = evt.nativeEvent.locationY;
@@ -50,7 +51,6 @@ const Bone = ({navigation}) => {
           <TouchableOpacity onPress={(evt) => handlePress(evt)}>
             <Image source={p15} style={styles.ui} />
           </TouchableOpacity>
-
           <View>
             <TouchableOpacity>
               <Image source={p11} style={styles.video} />
@@ -64,8 +64,8 @@ const Bone = ({navigation}) => {
         <View style={styles.back2}>
           <Image source={p16} style={styles.balloonInner} />
           <View style={{flexDirection: 'row'}}>
-            <Image source={p17} />
-            <View>
+            <Image source={p20} />
+            <View style={{marginLeft: 10}}>
               <Image source={p18} />
               <Image source={p19} style={{resizeMode: 'contain', width: 400}} />
             </View>
@@ -132,4 +132,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Bone;
+export default Bone2;

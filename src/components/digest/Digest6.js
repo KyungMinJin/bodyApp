@@ -1,33 +1,46 @@
 import React from 'react';
 import {View, StyleSheet, Image, TouchableOpacity} from 'react-native';
-import p15 from '../../images/그림68.png';
-import p67 from '../../images/그림67.png';
+import p15 from '../../images/그림120.png';
 import p11 from '../../images/그림11.png';
 import p12 from '../../images/그림12.png';
-import p16 from '../../images/그림70.png';
-import p18 from '../../images/그림69.png';
-import p17 from '../../images/그림71.png';
-import p19 from '../../images/그림72.png';
+import p16 from '../../images/그림39.png';
+import p18 from '../../images/그림62.png';
+import p17 from '../../images/그림58.png';
+import p19 from '../../images/그림63.png';
+import p43 from '../../images/그림64.png';
+import p61 from '../../images/그림61.png';
 import Tab from '../common/Tab';
-const Breathe = ({navigation}) => {
+const Digest = ({navigation}) => {
   const handlePress = (evt) => {
     const x = evt.nativeEvent.locationX;
     const y = evt.nativeEvent.locationY;
-    // 코
-    if (x > 255 && x < 356 && y > 163 && y < 223) {
-      navigation.navigate('Breathe');
+    // 입
+    if (x > 264 && x < 369 && y > 202 && y < 236) {
+      navigation.navigate('Digest');
     }
-    //기관
-    else if (x > 311 && x < 375 && y > 243 && y < 470) {
-      navigation.navigate('Breathe2');
+    //식도
+    else if (x > 368 && x < 405 && y > 239 && y < 373) {
+      navigation.navigate('Digest2');
     }
-    //기관지
-    else if (x > 257 && x < 489 && y > 401 && y < 502) {
-      navigation.navigate('Breathe3');
+    //위
+    else if (x > 342 && x < 465 && y > 380 && y < 480) {
+      navigation.navigate('Digest3');
     }
-    // 폐
-    else if (x > 203 && y > 374 && x < 520 && y < 740) {
-      navigation.navigate('Breathe4');
+    // 소장
+    else if (x > 307 && y > 554 && x < 416 && y < 624) {
+      navigation.navigate('Digest4');
+    }
+    //대장
+    else if (x > 265 && y > 518 && x < 472 && y < 626) {
+      navigation.navigate('Digest5');
+    }
+    // 항문
+    else if (x > 357 && y > 642 && x < 428 && y < 696) {
+      navigation.navigate('Digest6');
+    }
+    //간
+    else if (x > 262 && x < 321 && y > 412 && y < 485) {
+      navigation.navigate('Digest7');
     }
 
     console.log(
@@ -40,7 +53,6 @@ const Breathe = ({navigation}) => {
         <View style={styles.back}>
           <TouchableOpacity onPress={(evt) => handlePress(evt)}>
             <Image source={p15} style={styles.ui} />
-            <Image source={p67} style={{marginTop: -600, marginLeft: 30}} />
           </TouchableOpacity>
           <View>
             <TouchableOpacity style={styles.video}>
@@ -55,16 +67,21 @@ const Breathe = ({navigation}) => {
         <View style={styles.back2}>
           <Image source={p16} style={styles.balloonInner} />
           <View style={{flexDirection: 'row'}}>
-            <Image source={p18} />
+            <Image source={p18} style={{resizeMode: 'contain', width: 200}} />
             <View>
-              <Image source={p17} />
-              <Image source={p19} style={{resizeMode: 'contain', width: 400}} />
+              <Image
+                source={p17}
+                style={{resizeMode: 'contain', height: 300}}
+              />
+              <Image source={p61} style={styles.arrow} />
             </View>
           </View>
+          <Image source={p19} style={{resizeMode: 'contain', width: 500}} />
+          <Image source={p43} style={{resizeMode: 'contain', width: 600}} />
         </View>
       </View>
 
-      <Tab navigation={navigation} style={styles.tab} active="Breathe" />
+      <Tab navigation={navigation} style={styles.tab} active="Digest" />
     </View>
   );
 };
@@ -75,14 +92,14 @@ const styles = StyleSheet.create({
     bottom: 330,
   },
   back: {
-    backgroundColor: '#ec7093',
+    backgroundColor: '#a0d066',
     flexDirection: 'row',
     borderRadius: 100,
     margin: 30,
     width: '50%',
   },
   back2: {
-    borderColor: '#ec7093',
+    borderColor: '#a0d066',
     borderWidth: 20,
     backgroundColor: '#ffe699',
     width: '50%',
@@ -99,9 +116,8 @@ const styles = StyleSheet.create({
     marginLeft: -140,
   },
   ui: {
-    width: 794,
-    height: 794,
-    marginRight: -40,
+    width: 760,
+    height: 760,
   },
   ui2: {
     resizeMode: 'contain',
@@ -132,6 +148,12 @@ const styles = StyleSheet.create({
     left: 980,
     bottom: 420,
   },
+  arrow: {
+    resizeMode: 'contain',
+    width: 150,
+    marginTop: -70,
+    marginLeft: 240,
+  },
   balloonInner: {
     width: 650,
     resizeMode: 'contain',
@@ -144,4 +166,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Breathe;
+export default Digest;

@@ -1,44 +1,25 @@
 import React from 'react';
 import {View, StyleSheet, Image, TouchableOpacity} from 'react-native';
-import p15 from '../../images/그림15.png';
+import p15 from '../../images/그림1111.png';
 import p11 from '../../images/그림11.png';
 import p12 from '../../images/그림12.png';
-import p16 from '../../images/그림16.png';
-import p17 from '../../images/그림17.png';
-import p18 from '../../images/그림18.png';
-import p19 from '../../images/그림19.png';
+import p16 from '../../images/그림104.png';
+import p17 from '../../images/그림102.png';
+import p103 from '../../images/그림103.png';
 import Tab from '../common/Tab';
-const Bone = ({navigation}) => {
+const Percept2 = ({navigation}) => {
   const handlePress = (evt) => {
     const x = evt.nativeEvent.locationX;
     const y = evt.nativeEvent.locationY;
-    // 머리
-    if (x > 116 && x < 161 && y > 30 && y < 94) {
-      navigation.navigate('Bone');
+    // 신경
+    if (x > 52 && x < 507 && y > 56 && y < 440) {
+      navigation.navigate('Percept2');
     }
-    // 척추
-    else if (x > 132 && x < 153 && y > 94 && y < 241) {
-      navigation.navigate('Bone2');
-    }
-    //갈비
-    else if (x > 103 && x < 187 && y > 108 && y < 206) {
-      navigation.navigate('Bone3');
-    }
-    //팔
-    else if (
-      (x > 18 && x < 92 && y > 118 && y < 334) ||
-      (x > 181 && x < 274 && y > 113 && y < 342)
-    ) {
-      navigation.navigate('Bone4');
-    }
-    //다리
-    else if (x > 90 && x < 191 && y > 234 && y < 566) {
-      navigation.navigate('Bone5');
-    }
-    //근육
+    //감각
     else {
-      navigation.navigate('Bone6');
+      navigation.navigate('Percept');
     }
+
     console.log(
       `x coord = ${evt.nativeEvent.locationX} ycoord = ${evt.nativeEvent.locationY}`,
     );
@@ -50,13 +31,12 @@ const Bone = ({navigation}) => {
           <TouchableOpacity onPress={(evt) => handlePress(evt)}>
             <Image source={p15} style={styles.ui} />
           </TouchableOpacity>
-
           <View>
-            <TouchableOpacity>
-              <Image source={p11} style={styles.video} />
+            <TouchableOpacity style={styles.video}>
+              <Image source={p11} />
             </TouchableOpacity>
-            <TouchableOpacity>
-              <Image source={p12} style={styles.vr} />
+            <TouchableOpacity style={styles.vr}>
+              <Image source={p12} />
             </TouchableOpacity>
           </View>
         </View>
@@ -64,16 +44,30 @@ const Bone = ({navigation}) => {
         <View style={styles.back2}>
           <Image source={p16} style={styles.balloonInner} />
           <View style={{flexDirection: 'row'}}>
-            <Image source={p17} />
-            <View>
-              <Image source={p18} />
-              <Image source={p19} style={{resizeMode: 'contain', width: 400}} />
-            </View>
+            <Image
+              source={p17}
+              style={{
+                resizeMode: 'contain',
+                marginTop: -130,
+                marginLeft: -100,
+                width: 600,
+                height: 600,
+              }}
+            />
+            <Image
+              source={p103}
+              style={{
+                resizeMode: 'contain',
+                marginLeft: -130,
+                width: 300,
+                height: 350,
+              }}
+            />
           </View>
         </View>
       </View>
 
-      <Tab navigation={navigation} style={styles.tab} active="Bone" />
+      <Tab navigation={navigation} style={styles.tab} active="Percept" />
     </View>
   );
 };
@@ -84,14 +78,14 @@ const styles = StyleSheet.create({
     bottom: 330,
   },
   back: {
-    backgroundColor: '#ec7728',
-    width: '50%',
-    margin: 30,
+    backgroundColor: '#e7c753',
     flexDirection: 'row',
     borderRadius: 100,
+    margin: 30,
+    width: '50%',
   },
   back2: {
-    borderColor: '#ec7728',
+    borderColor: '#e7c753',
     borderWidth: 20,
     backgroundColor: '#ffe699',
     width: '50%',
@@ -101,15 +95,37 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   video: {
+    marginLeft: -190,
     marginTop: 350,
   },
   vr: {
-    marginLeft: 10,
+    marginLeft: -180,
   },
   ui: {
-    marginTop: 80,
-    marginLeft: 20,
-    marginRight: 10,
+    resizeMode: 'contain',
+    width: 794,
+    height: 794,
+  },
+  ui2: {
+    resizeMode: 'contain',
+    height: 400,
+    marginLeft: 50,
+    width: 500,
+  },
+  ui3: {
+    resizeMode: 'contain',
+    height: 300,
+    width: 230,
+  },
+  ui4: {
+    resizeMode: 'contain',
+    height: 300,
+    width: 300,
+  },
+  ui6: {
+    resizeMode: 'contain',
+    height: 280,
+    width: 280,
   },
   homes: {
     backgroundColor: '#FFF2CC',
@@ -132,4 +148,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Bone;
+export default Percept2;

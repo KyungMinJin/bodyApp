@@ -5,11 +5,11 @@ import p67 from '../../images/그림67.png';
 import p11 from '../../images/그림11.png';
 import p12 from '../../images/그림12.png';
 import p16 from '../../images/그림70.png';
-import p18 from '../../images/그림69.png';
-import p17 from '../../images/그림71.png';
-import p19 from '../../images/그림72.png';
+import p18 from '../../images/그림75.png';
+import p17 from '../../images/그림73.png';
+import p19 from '../../images/그림74.png';
 import Tab from '../common/Tab';
-const Breathe = ({navigation}) => {
+const Breathe2 = ({navigation}) => {
   const handlePress = (evt) => {
     const x = evt.nativeEvent.locationX;
     const y = evt.nativeEvent.locationY;
@@ -55,12 +55,20 @@ const Breathe = ({navigation}) => {
         <View style={styles.back2}>
           <Image source={p16} style={styles.balloonInner} />
           <View style={{flexDirection: 'row'}}>
-            <Image source={p18} />
+            <Image
+              source={p18}
+              style={{
+                resizeMode: 'contain',
+                width: 150,
+                marginLeft: 160,
+                marginRight: -150,
+              }}
+            />
             <View>
-              <Image source={p17} />
-              <Image source={p19} style={{resizeMode: 'contain', width: 400}} />
+              <Image source={p17} style={{resizeMode: 'contain', width: 850}} />
             </View>
           </View>
+          <Image source={p19} style={{resizeMode: 'contain', width: 550}} />
         </View>
       </View>
 
@@ -144,4 +152,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Breathe;
+export default Breathe2;
