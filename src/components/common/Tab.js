@@ -44,7 +44,7 @@ const Tab = ({navigation, active}) => {
           <View />
         )}
         {active !== '' ? (
-          <TouchableOpacity onPress={() => navigation.navigate('Excert')}>
+          <TouchableOpacity onPress={() => navigation.navigate('Excret')}>
             <Image style={styles.logo} source={p7} />
           </TouchableOpacity>
         ) : (
