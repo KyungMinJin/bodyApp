@@ -4,11 +4,11 @@ import p15 from '../../images/그림90.png';
 import p11 from '../../images/그림11.png';
 import p12 from '../../images/그림12.png';
 import p16 from '../../images/그림92.png';
-import p18 from '../../images/그림93.png';
-import p17 from '../../images/그림91.png';
-import p19 from '../../images/그림94.png';
+import p18 from '../../images/그림97.png';
+import p17 from '../../images/그림95.png';
+import p19 from '../../images/그림96.png';
 import Tab from '../common/Tab';
-const Excret = ({navigation}) => {
+const Excret2 = ({navigation}) => {
   const handlePress = (evt) => {
     const x = evt.nativeEvent.locationX;
     const y = evt.nativeEvent.locationY;
@@ -50,11 +50,14 @@ const Excret = ({navigation}) => {
               style={{
                 resizeMode: 'contain',
                 width: 150,
-                marginRight: 100,
+                // marginRight: 100,
               }}
             />
             <View>
-              <Image source={p17} style={{resizeMode: 'contain', width: 300}} />
+              <Image
+                source={p17}
+                style={{resizeMode: 'contain', width: 400, height: 350}}
+              />
             </View>
           </View>
           <Image
@@ -140,7 +143,6 @@ const styles = StyleSheet.create({
   },
   balloonInner: {
     width: 650,
-    marginTop: 80,
     resizeMode: 'contain',
   },
   main: {
@@ -151,4 +153,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Excret;
+export default Excret2;
