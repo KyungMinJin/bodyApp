@@ -81,13 +81,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     height: '23%',
-    maxWidth: '80%',
+    maxWidth: '100%',
   },
   logo: {
-    resizeMode: 'contain',
+    resizeMode: 'center',
   },
   menu: {
-    maxWidth: '70%',
     // marginHorizontal: '5%',
     flexDirection: 'row',
   },
