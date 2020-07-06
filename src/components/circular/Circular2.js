@@ -14,7 +14,7 @@ const Circular2 = ({navigation}) => {
     const x = evt.nativeEvent.locationX;
     const y = evt.nativeEvent.locationY;
     // 심장
-    if (x > 342 && x < 481 && y > 134 && y < 289) {
+    if (x > 305 && x < 394 && y > 141 && y < 217) {
       navigation.navigate('Circular');
     }
     //혈관
@@ -50,18 +50,26 @@ const Circular2 = ({navigation}) => {
               source={p18}
               style={{
                 resizeMode: 'contain',
-                width: 150,
-                marginRight: 100,
+                width: '20%',
+                left: '20%',
               }}
             />
             <View>
               <Image
                 source={p17}
-                style={{resizeMode: 'contain', height: 350}}
+                style={{resizeMode: 'contain', left: '30%', height: '70%'}}
               />
             </View>
           </View>
-          <Image source={p19} style={{resizeMode: 'contain', width: 550}} />
+          <Image
+            source={p19}
+            style={{
+              resizeMode: 'contain',
+              left: '10%',
+              bottom: '30%',
+              width: '80%',
+            }}
+          />
         </View>
       </View>
 
@@ -71,16 +79,12 @@ const Circular2 = ({navigation}) => {
 };
 
 const styles = StyleSheet.create({
-  tab: {
-    position: 'absolute',
-    bottom: 330,
-  },
   back: {
     backgroundColor: '#df7fe1',
+    width: '50%',
+    margin: 30,
     flexDirection: 'row',
     borderRadius: 100,
-    margin: 30,
-    width: '50%',
   },
   back2: {
     borderColor: '#df7fe1',
@@ -88,63 +92,36 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffe699',
     width: '50%',
     margin: 30,
+    marginLeft: 0,
     borderRadius: 100,
-    justifyContent: 'center',
-    alignItems: 'center',
   },
   video: {
-    marginLeft: -150,
-    marginTop: 350,
+    top: '30%',
+    right: '105%',
   },
   vr: {
-    marginLeft: -140,
+    top: '30%',
+    right: '100%',
   },
   ui: {
-    width: 674,
-    height: 674,
-    marginTop: 65,
-    marginLeft: 50,
-    marginRight: 40,
-  },
-  ui2: {
     resizeMode: 'contain',
-    height: 300,
-    width: 300,
-  },
-  ui3: {
-    resizeMode: 'contain',
-    height: 300,
-    width: 230,
-  },
-  ui4: {
-    resizeMode: 'contain',
-    height: 300,
-    width: 300,
-  },
-  ui6: {
-    resizeMode: 'contain',
-    height: 280,
-    width: 280,
+    height: '98%',
+    top: '10%',
   },
   homes: {
     backgroundColor: '#FFF2CC',
     flex: 1,
   },
-  balloon3: {
-    position: 'absolute',
-    left: 980,
-    bottom: 420,
-  },
   balloonInner: {
-    width: 650,
+    height: '25%',
+    right: '26%',
+    marginBottom: '4%',
     resizeMode: 'contain',
   },
   main: {
     width: '93%',
-    height: '100%',
     flex: 1,
     flexDirection: 'row',
   },
 });
-
 export default Circular2;

@@ -74,81 +74,49 @@ const Excret = ({navigation}) => {
 };
 
 const styles = StyleSheet.create({
-  tab: {
-    position: 'absolute',
-    bottom: 330,
-  },
   back: {
-    backgroundColor: '#61cfdd',
+    backgroundColor: '#e7c753',
+    width: '50%',
+    margin: 30,
     flexDirection: 'row',
     borderRadius: 100,
-    margin: 30,
-    width: '50%',
   },
   back2: {
-    borderColor: '#61cfdd',
+    borderColor: '#e7c753',
     borderWidth: 20,
     backgroundColor: '#ffe699',
     width: '50%',
     margin: 30,
+    marginLeft: 0,
     borderRadius: 100,
-    justifyContent: 'center',
-    alignItems: 'center',
   },
   video: {
-    marginLeft: -150,
-    marginTop: 350,
+    top: '30%',
+    right: '275%',
   },
   vr: {
-    marginLeft: -140,
+    top: '30%',
+    right: '270%',
   },
   ui: {
-    width: 674,
-    height: 674,
-    marginTop: 65,
-    marginLeft: 50,
-    marginRight: 40,
-  },
-  ui2: {
     resizeMode: 'contain',
-    height: 300,
-    width: 300,
-  },
-  ui3: {
-    resizeMode: 'contain',
-    height: 300,
-    width: 230,
-  },
-  ui4: {
-    resizeMode: 'contain',
-    height: 300,
-    width: 300,
-  },
-  ui6: {
-    resizeMode: 'contain',
-    height: 280,
-    width: 280,
+    height: '98%',
+    right: '18%',
   },
   homes: {
     backgroundColor: '#FFF2CC',
     flex: 1,
   },
-  balloon3: {
-    position: 'absolute',
-    left: 980,
-    bottom: 420,
-  },
   balloonInner: {
-    width: 650,
-    marginTop: 80,
+    height: '25%',
+    right: '26%',
+    marginBottom: '4%',
     resizeMode: 'contain',
   },
   main: {
     width: '93%',
-    height: '100%',
     flex: 1,
     flexDirection: 'row',
   },
 });
-
 export default Excret;
