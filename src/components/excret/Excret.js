@@ -13,7 +13,7 @@ const Excret = ({navigation}) => {
     const x = evt.nativeEvent.locationX;
     const y = evt.nativeEvent.locationY;
     // 심장
-    if (x > 172 && x < 518 && y > 18 && y < 264) {
+    if (x > 117 && x < 301 && y > 72 && y < 174) {
       navigation.navigate('Excret');
     }
     //혈관
@@ -49,20 +49,29 @@ const Excret = ({navigation}) => {
               source={p18}
               style={{
                 resizeMode: 'contain',
-                width: 150,
-                marginRight: 100,
+                width: '20%',
+                left: '10%',
               }}
             />
             <View>
-              <Image source={p17} style={{resizeMode: 'contain', width: 300}} />
+              <Image
+                source={p17}
+                style={{
+                  resizeMode: 'contain',
+                  left: '30%',
+                  height: '80%',
+                  bottom: '10%',
+                }}
+              />
             </View>
           </View>
           <Image
             source={p19}
             style={{
-              marginTop: -80,
               resizeMode: 'contain',
-              width: 550,
+              width: '80%',
+              left: '10%',
+              bottom: '50%',
             }}
           />
         </View>
@@ -75,14 +84,14 @@ const Excret = ({navigation}) => {
 
 const styles = StyleSheet.create({
   back: {
-    backgroundColor: '#e7c753',
+    backgroundColor: '#61cfdd',
     width: '50%',
     margin: 30,
     flexDirection: 'row',
     borderRadius: 100,
   },
   back2: {
-    borderColor: '#e7c753',
+    borderColor: '#61cfdd',
     borderWidth: 20,
     backgroundColor: '#ffe699',
     width: '50%',
@@ -92,16 +101,16 @@ const styles = StyleSheet.create({
   },
   video: {
     top: '30%',
-    right: '275%',
+    right: '5%',
   },
   vr: {
     top: '30%',
-    right: '270%',
   },
   ui: {
     resizeMode: 'contain',
     height: '98%',
-    right: '18%',
+    top: '10%',
+    left: '20%',
   },
   homes: {
     backgroundColor: '#FFF2CC',
