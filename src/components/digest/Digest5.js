@@ -14,31 +14,31 @@ const Digest = ({navigation}) => {
     const x = evt.nativeEvent.locationX;
     const y = evt.nativeEvent.locationY;
     // 입
-    if (x > 264 && x < 369 && y > 202 && y < 236) {
+    if (x > 380 && x < 439 && y > 127 && y < 144) {
       navigation.navigate('Digest');
     }
     //식도
-    else if (x > 368 && x < 405 && y > 239 && y < 373) {
+    else if (x > 449 && x < 477 && y > 149 && y < 241) {
       navigation.navigate('Digest2');
     }
     //위
-    else if (x > 342 && x < 465 && y > 380 && y < 480) {
+    else if (x > 432 && x < 522 && y > 250 && y < 317) {
       navigation.navigate('Digest3');
     }
     // 소장
-    else if (x > 307 && y > 554 && x < 416 && y < 624) {
+    else if (x > 407 && y > 355 && x < 494 && y < 396) {
       navigation.navigate('Digest4');
     }
     //대장
-    else if (x > 265 && y > 518 && x < 472 && y < 626) {
+    else if (x > 384 && y > 327 && x < 515 && y < 420) {
       navigation.navigate('Digest5');
     }
     // 항문
-    else if (x > 357 && y > 642 && x < 428 && y < 696) {
+    else if (x > 445 && y > 416 && x < 481 && y < 452) {
       navigation.navigate('Digest6');
     }
     //간
-    else if (x > 262 && x < 321 && y > 412 && y < 485) {
+    else if (x > 381 && x < 421 && y > 256 && y < 318) {
       navigation.navigate('Digest7');
     }
 
@@ -66,16 +66,39 @@ const Digest = ({navigation}) => {
         <View style={styles.back2}>
           <Image source={p16} style={styles.balloonInner} />
           <View style={{flexDirection: 'row'}}>
-            <Image source={p18} style={{resizeMode: 'contain', width: 200}} />
+            <Image
+              source={p18}
+              style={{resizeMode: 'contain', height: '18%'}}
+            />
             <View>
               <Image
                 source={p17}
-                style={{resizeMode: 'contain', height: 300}}
+                style={{
+                  resizeMode: 'contain',
+                  bottom: '23%',
+                  width: '33%',
+                }}
+              />
+              <Image
+                source={p19}
+                style={{
+                  resizeMode: 'contain',
+                  height: '18%',
+                  right: '45%',
+                  bottom: '43%',
+                }}
               />
             </View>
           </View>
-          <Image source={p19} style={{resizeMode: 'contain', width: 500}} />
-          <Image source={p43} style={{resizeMode: 'contain', width: 600}} />
+          <Image
+            source={p43}
+            style={{
+              resizeMode: 'contain',
+              width: '80%',
+              left: '11%',
+              bottom: '46%',
+            }}
+          />
         </View>
       </View>
 
@@ -85,16 +108,12 @@ const Digest = ({navigation}) => {
 };
 
 const styles = StyleSheet.create({
-  tab: {
-    position: 'absolute',
-    bottom: 330,
-  },
   back: {
     backgroundColor: '#a0d066',
+    width: '50%',
+    margin: 30,
     flexDirection: 'row',
     borderRadius: 100,
-    margin: 30,
-    width: '50%',
   },
   back2: {
     borderColor: '#a0d066',
@@ -102,60 +121,36 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffe699',
     width: '50%',
     margin: 30,
+    marginLeft: 0,
     borderRadius: 100,
-    justifyContent: 'center',
-    alignItems: 'center',
   },
   video: {
-    marginLeft: -150,
-    marginTop: 350,
+    top: '30%',
+    right: '265%',
   },
   vr: {
-    marginLeft: -140,
+    top: '30%',
+    right: '260%',
   },
   ui: {
-    width: 760,
-    height: 760,
-  },
-  ui2: {
     resizeMode: 'contain',
-    height: 300,
-    width: 300,
-  },
-  ui3: {
-    resizeMode: 'contain',
-    height: 300,
-    width: 230,
-  },
-  ui4: {
-    resizeMode: 'contain',
-    height: 300,
-    width: 300,
-  },
-  ui6: {
-    resizeMode: 'contain',
-    height: 280,
-    width: 280,
+    height: '98%',
+    right: '14%',
   },
   homes: {
     backgroundColor: '#FFF2CC',
     flex: 1,
   },
-  balloon3: {
-    position: 'absolute',
-    left: 980,
-    bottom: 420,
-  },
   balloonInner: {
-    width: 650,
+    height: '25%',
+    right: '26%',
+    marginBottom: '4%',
     resizeMode: 'contain',
   },
   main: {
     width: '93%',
-    height: '100%',
     flex: 1,
     flexDirection: 'row',
   },
 });
-
 export default Digest;

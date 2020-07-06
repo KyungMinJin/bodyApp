@@ -110,12 +110,12 @@ const styles = StyleSheet.create({
     borderRadius: 100,
   },
   video: {
-    top: '90%',
-    right: '95%',
+    top: '30%',
+    right: '265%',
   },
   vr: {
-    top: '90%',
-    right: '90%',
+    top: '30%',
+    right: '260%',
   },
   ui: {
     resizeMode: 'contain',
