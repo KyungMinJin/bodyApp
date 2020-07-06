@@ -90,6 +90,8 @@ const styles = StyleSheet.create({
     maxWidth: '100%',
   },
   logo: {
+    width: '100%',
+    height: '100%',
     resizeMode: 'center',
   },
   menu: {
@@ -97,9 +99,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   touch: {
-    // width: '10%',
+    flex: 1,
+    maxWidth: '10%',
     // height: '10%',
-    resizeMode: 'contain',
+    // resizeMode: 'contain',
   },
 });
 
