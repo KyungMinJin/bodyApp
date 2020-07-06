@@ -11,7 +11,7 @@ const Percept = ({navigation}) => {
     const x = evt.nativeEvent.locationX;
     const y = evt.nativeEvent.locationY;
     // 신경
-    if (x > 52 && x < 507 && y > 56 && y < 440) {
+    if (x > 342 && x < 532 && y > 120 && y < 254) {
       navigation.navigate('Percept2');
     }
     //감각
@@ -48,9 +48,9 @@ const Percept = ({navigation}) => {
                 source={p17}
                 style={{
                   resizeMode: 'contain',
-                  marginTop: -230,
-                  width: 600,
-                  height: 650,
+                  right: '25%',
+                  height: '100%',
+                  bottom: '35%',
                 }}
               />
             </View>
@@ -64,16 +64,12 @@ const Percept = ({navigation}) => {
 };
 
 const styles = StyleSheet.create({
-  tab: {
-    position: 'absolute',
-    bottom: 330,
-  },
   back: {
     backgroundColor: '#e7c753',
+    width: '50%',
+    margin: 30,
     flexDirection: 'row',
     borderRadius: 100,
-    margin: 30,
-    width: '50%',
   },
   back2: {
     borderColor: '#e7c753',
@@ -81,38 +77,34 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffe699',
     width: '50%',
     margin: 30,
+    marginLeft: 0,
     borderRadius: 100,
-    justifyContent: 'center',
-    alignItems: 'center',
   },
   video: {
-    marginLeft: -190,
-    marginTop: 350,
+    top: '30%',
+    right: '275%',
   },
   vr: {
-    marginLeft: -180,
+    top: '30%',
+    right: '270%',
   },
   ui: {
     resizeMode: 'contain',
-    width: 794,
-    height: 794,
+    height: '98%',
+    right: '18%',
   },
   homes: {
     backgroundColor: '#FFF2CC',
     flex: 1,
   },
-  balloon3: {
-    position: 'absolute',
-    left: 980,
-    bottom: 420,
-  },
   balloonInner: {
-    width: 650,
+    height: '25%',
+    right: '26%',
+    marginBottom: '4%',
     resizeMode: 'contain',
   },
   main: {
     width: '93%',
-    height: '100%',
     flex: 1,
     flexDirection: 'row',
   },
