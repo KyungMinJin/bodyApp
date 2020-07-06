@@ -14,26 +14,26 @@ const Bone3 = ({navigation}) => {
     const x = evt.nativeEvent.locationX;
     const y = evt.nativeEvent.locationY;
     // 머리
-    if (x > 116 && x < 161 && y > 30 && y < 94) {
+    if (x > 173 && x < 198 && y > 22 && y < 64) {
       navigation.navigate('Bone');
     }
     // 척추
-    else if (x > 132 && x < 153 && y > 94 && y < 241) {
+    else if (x > 180 && x < 194 && y > 65 && y < 157) {
       navigation.navigate('Bone2');
     }
     //갈비
-    else if (x > 103 && x < 187 && y > 108 && y < 206) {
+    else if (x > 163 && x < 214 && y > 73 && y < 136) {
       navigation.navigate('Bone3');
     }
     //팔
     else if (
-      (x > 18 && x < 92 && y > 118 && y < 334) ||
-      (x > 181 && x < 274 && y > 113 && y < 342)
+      (x > 103 && x < 152 && y > 76 && y < 212) ||
+      (x > 276 && x < 274 && y > 217 && y < 223)
     ) {
       navigation.navigate('Bone4');
     }
     //다리
-    else if (x > 90 && x < 191 && y > 234 && y < 566) {
+    else if (x > 155 && x < 221 && y > 155 && y < 380) {
       navigation.navigate('Bone5');
     }
     //근육
@@ -66,8 +66,14 @@ const Bone3 = ({navigation}) => {
           <View style={{flexDirection: 'row'}}>
             <Image source={p23} />
             <View style={{marginLeft: 10}}>
-              <Image source={p18} />
-              <Image source={p19} style={{resizeMode: 'contain', width: 400}} />
+              <Image
+                source={p18}
+                style={{resizeMode: 'contain', height: '20%'}}
+              />
+              <Image
+                source={p19}
+                style={{resizeMode: 'contain', height: '55%', right: '25%'}}
+              />
             </View>
           </View>
         </View>
@@ -79,10 +85,6 @@ const Bone3 = ({navigation}) => {
 };
 
 const styles = StyleSheet.create({
-  tab: {
-    position: 'absolute',
-    bottom: 330,
-  },
   back: {
     backgroundColor: '#ec7728',
     width: '50%',
@@ -96,37 +98,35 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffe699',
     width: '50%',
     margin: 30,
+    marginLeft: 0,
     borderRadius: 100,
-    justifyContent: 'center',
-    alignItems: 'center',
   },
   video: {
-    marginTop: 350,
+    top: '90%',
+    right: '95%',
   },
   vr: {
-    marginLeft: 10,
+    top: '90%',
+    right: '90%',
   },
   ui: {
+    resizeMode: 'contain',
     marginTop: 80,
     marginLeft: 20,
+    height: '80%',
     marginRight: 10,
   },
   homes: {
     backgroundColor: '#FFF2CC',
     flex: 1,
   },
-  balloon3: {
-    position: 'absolute',
-    left: 980,
-    bottom: 420,
-  },
   balloonInner: {
-    width: 650,
+    height: '30%',
+    right: '26%',
     resizeMode: 'contain',
   },
   main: {
     width: '93%',
-    height: '100%',
     flex: 1,
     flexDirection: 'row',
   },

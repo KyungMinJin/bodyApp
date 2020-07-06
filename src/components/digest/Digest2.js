@@ -70,7 +70,10 @@ const Digest = ({navigation}) => {
             <Image source={p18} />
             <View>
               <Image source={p17} />
-              <Image source={p19} style={{resizeMode: 'contain', width: 400}} />
+              <Image
+                source={p19}
+                style={{resizeMode: 'contain', height: '40%', right: '20%'}}
+              />
             </View>
           </View>
           <Image source={p43} style={{resizeMode: 'contain', width: 600}} />
