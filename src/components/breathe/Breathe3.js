@@ -13,19 +13,19 @@ const Breathe3 = ({navigation}) => {
     const x = evt.nativeEvent.locationX;
     const y = evt.nativeEvent.locationY;
     // 코
-    if (x > 255 && x < 356 && y > 163 && y < 223) {
+    if (x > 440 && x < 508 && y > 102 && y < 135) {
       navigation.navigate('Breathe');
     }
     //기관
-    else if (x > 311 && x < 375 && y > 243 && y < 470) {
+    else if (x > 498 && x < 520 && y > 199 && y < 291) {
       navigation.navigate('Breathe2');
     }
     //기관지
-    else if (x > 257 && x < 489 && y > 401 && y < 502) {
+    else if (x > 448 && x < 597 && y > 239 && y < 306) {
       navigation.navigate('Breathe3');
     }
     // 폐
-    else if (x > 203 && y > 374 && x < 520 && y < 740) {
+    else if (x > 431 && y > 240 && x < 611 && y < 452) {
       navigation.navigate('Breathe4');
     }
 
@@ -53,15 +53,29 @@ const Breathe3 = ({navigation}) => {
         <View style={styles.back2}>
           <Image source={p16} style={styles.balloonInner} />
           <View style={{flexDirection: 'row'}}>
-            <Image source={p18} style={{resizeMode: 'contain', width: 150}} />
+            <Image
+              source={p18}
+              style={{
+                resizeMode: 'contain',
+                width: '20%',
+              }}
+            />
             <View>
               <Image
                 source={p17}
-                style={{resizeMode: 'contain', height: 350}}
+                style={{resizeMode: 'contain', height: '70%'}}
               />
             </View>
           </View>
-          <Image source={p19} style={{resizeMode: 'contain', width: 600}} />
+          <Image
+            source={p19}
+            style={{
+              resizeMode: 'contain',
+              width: '70%',
+              bottom: '24%',
+              left: '20%',
+            }}
+          />
         </View>
       </View>
 
@@ -71,16 +85,12 @@ const Breathe3 = ({navigation}) => {
 };
 
 const styles = StyleSheet.create({
-  tab: {
-    position: 'absolute',
-    bottom: 330,
-  },
   back: {
     backgroundColor: '#ec7093',
+    width: '50%',
+    margin: 30,
     flexDirection: 'row',
     borderRadius: 100,
-    margin: 30,
-    width: '50%',
   },
   back2: {
     borderColor: '#ec7093',
@@ -88,58 +98,35 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffe699',
     width: '50%',
     margin: 30,
+    marginLeft: 0,
     borderRadius: 100,
-    justifyContent: 'center',
-    alignItems: 'center',
   },
   video: {
-    marginLeft: -150,
-    marginTop: 350,
+    top: '30%',
+    right: '345%',
   },
   vr: {
-    marginLeft: -140,
+    right: '340%',
+    top: '30%',
   },
   ui: {
-    width: 794,
-    height: 794,
-    marginRight: -40,
-  },
-  ui2: {
     resizeMode: 'contain',
-    height: 300,
-    width: 300,
-  },
-  ui3: {
-    resizeMode: 'contain',
-    height: 300,
-    width: 230,
-  },
-  ui4: {
-    resizeMode: 'contain',
-    height: 300,
-    width: 300,
-  },
-  ui6: {
-    resizeMode: 'contain',
-    height: 280,
-    width: 280,
+    height: '98%',
+    top: '6%',
+    right: '20%',
   },
   homes: {
     backgroundColor: '#FFF2CC',
     flex: 1,
   },
-  balloon3: {
-    position: 'absolute',
-    left: 980,
-    bottom: 420,
-  },
   balloonInner: {
-    width: 650,
+    height: '25%',
+    right: '26%',
+    top: '4%',
     resizeMode: 'contain',
   },
   main: {
     width: '93%',
-    height: '100%',
     flex: 1,
     flexDirection: 'row',
   },
