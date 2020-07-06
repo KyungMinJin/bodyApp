@@ -18,11 +18,11 @@ const Tab = ({navigation, active}) => {
   return (
     <View style={styles.home}>
       <View style={styles.menu}>
-        <TouchableHighlight
+        <TouchableOpacity
           style={styles.touch}
           onPress={() => navigation.navigate('Home')}>
           <Image style={styles.logo} source={p112} />
-        </TouchableHighlight>
+        </TouchableOpacity>
         {active !== 'Bone' ? (
           <TouchableOpacity
             style={styles.touch}
@@ -90,6 +90,8 @@ const styles = StyleSheet.create({
     maxWidth: '100%',
   },
   logo: {
+    width: '100%',
+    height: '100%',
     resizeMode: 'center',
   },
   menu: {
@@ -97,9 +99,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   touch: {
-    // width: '10%',
+    flex: 1,
+    maxWidth: '10%',
     // height: '10%',
-    resizeMode: 'contain',
+    // resizeMode: 'contain',
   },
 });
 
