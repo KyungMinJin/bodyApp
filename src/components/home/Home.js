@@ -15,27 +15,31 @@ const Home = ({navigation}) => {
       <Image style={styles.logo} source={p1} />
       <View style={styles.menu}>
         <TouchableOpacity onPress={() => navigation.navigate('Guide')}>
-          <Image style={styles.logo} source={p2} />
+          <Image style={styles.leftLogo} source={p2} />
         </TouchableOpacity>
         <View style={styles.innerMenu}>
-          <TouchableOpacity onPress={() => navigation.navigate('Bone')}>
-            <Image style={styles.logo} source={p3} />
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => navigation.navigate('Digest')}>
-            <Image style={styles.logo} source={p4} />
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => navigation.navigate('Breathe')}>
-            <Image style={styles.logo} source={p5} />
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => navigation.navigate('Excret')}>
-            <Image style={styles.logo} source={p6} />
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => navigation.navigate('Percept')}>
-            <Image style={styles.logo} source={p7} />
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => navigation.navigate('Circular')}>
-            <Image style={styles.logo} source={p8} />
-          </TouchableOpacity>
+          <View style={styles.innerMenuRow}>
+            <TouchableOpacity onPress={() => navigation.navigate('Bone')}>
+              <Image style={styles.innerLogo} source={p3} />
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('Digest')}>
+              <Image style={styles.innerLogo} source={p4} />
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('Breathe')}>
+              <Image style={styles.innerLogo} source={p5} />
+            </TouchableOpacity>
+          </View>
+          <View style={styles.innerMenuRow}>
+            <TouchableOpacity onPress={() => navigation.navigate('Excret')}>
+              <Image style={styles.innerLogo} source={p6} />
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('Percept')}>
+              <Image style={styles.innerLogo} source={p7} />
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('Circular')}>
+              <Image style={styles.innerLogo} source={p8} />
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
     </View>
@@ -43,25 +47,35 @@ const Home = ({navigation}) => {
 };
 
 const styles = StyleSheet.create({
-  logo: {
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
   Homes: {
     backgroundColor: '#FFF2CC',
     flex: 1,
-    justifyContent: 'center',
+    padding: '5%',
     alignItems: 'center',
   },
+  logo: {
+    flex: 1,
+    resizeMode: 'contain',
+  },
   menu: {
+    flex: 4,
     flexDirection: 'row',
-    justifyContent: 'space-between',
+  },
+  leftLogo: {
+    resizeMode: 'contain',
+    flex: 1,
   },
   innerMenu: {
-    justifyContent: 'space-between',
-    width: 1000,
+    flex: 4,
+  },
+  innerMenuRow: {
+    flex: 1,
     flexDirection: 'row',
-    flexWrap: 'wrap',
+  },
+  innerLogo: {
+    flex: 1,
+    maxWidth: '33.33%',
+    resizeMode: 'contain',
   },
 });
 
