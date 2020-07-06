@@ -44,15 +44,6 @@ const Tab = ({navigation, active}) => {
         ) : (
           <View />
         )}
-        {active !== 'Circular' ? (
-          <TouchableOpacity
-            style={styles.touch}
-            onPress={() => navigation.navigate('Circular')}>
-            <Image style={styles.logo} source={p6} />
-          </TouchableOpacity>
-        ) : (
-          <View />
-        )}
         {active !== 'Excret' ? (
           <TouchableOpacity
             style={styles.touch}
@@ -70,6 +61,15 @@ const Tab = ({navigation, active}) => {
           </TouchableOpacity>
         ) : (
           <View />
+        )}
+        {active !== 'Circular' ? (
+            <TouchableOpacity
+                style={styles.touch}
+                onPress={() => navigation.navigate('Circular')}>
+              <Image style={styles.logo} source={p6} />
+            </TouchableOpacity>
+        ) : (
+            <View />
         )}
       </View>
     </View>
