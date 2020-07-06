@@ -18,11 +18,11 @@ const Tab = ({navigation, active}) => {
   return (
     <View style={styles.home}>
       <View style={styles.menu}>
-        <TouchableHighlight
+        <TouchableOpacity
           style={styles.touch}
           onPress={() => navigation.navigate('Home')}>
           <Image style={styles.logo} source={p112} />
-        </TouchableHighlight>
+        </TouchableOpacity>
         {active !== 'Bone' ? (
           <TouchableOpacity
             style={styles.touch}
