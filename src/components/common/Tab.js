@@ -10,55 +10,69 @@ import p112 from '../../images/그림112.png';
 
 const Tab = ({navigation, active}) => {
   return (
-    <View style={styles.home}>
-      <View style={styles.menu}>
-        <TouchableOpacity onPress={() => navigation.navigate('Home')}>
-          <Image style={styles.logo} source={p112} />
+    // <View style={styles.home}>
+    <View style={styles.menu}>
+      <TouchableOpacity
+        style={styles.touch}
+        onPress={() => navigation.navigate('Home')}>
+        <Image style={styles.logo} source={p112} />
+      </TouchableOpacity>
+      {active !== 'Bone' ? (
+        <TouchableOpacity
+          style={styles.touch}
+          onPress={() => navigation.navigate('Bone')}>
+          <Image style={styles.logo} source={p3} />
         </TouchableOpacity>
-        {active !== 'Bone' ? (
-          <TouchableOpacity onPress={() => navigation.navigate('Bone')}>
-            <Image style={styles.logo} source={p3} />
-          </TouchableOpacity>
-        ) : (
-          <View />
-        )}
-        {active !== 'Digest' ? (
-          <TouchableOpacity onPress={() => navigation.navigate('Digest')}>
-            <Image style={styles.logo} source={p4} />
-          </TouchableOpacity>
-        ) : (
-          <View />
-        )}
-        {active !== 'Breathe' ? (
-          <TouchableOpacity onPress={() => navigation.navigate('Breathe')}>
-            <Image style={styles.logo} source={p5} />
-          </TouchableOpacity>
-        ) : (
-          <View />
-        )}
-        {active !== 'Circular' ? (
-          <TouchableOpacity onPress={() => navigation.navigate('Circular')}>
-            <Image style={styles.logo} source={p6} />
-          </TouchableOpacity>
-        ) : (
-          <View />
-        )}
-        {active !== 'Excret' ? (
-          <TouchableOpacity onPress={() => navigation.navigate('Excret')}>
-            <Image style={styles.logo} source={p7} />
-          </TouchableOpacity>
-        ) : (
-          <View />
-        )}
-        {active !== 'Percept' ? (
-          <TouchableOpacity onPress={() => navigation.navigate('Percept')}>
-            <Image style={styles.logo} source={p8} />
-          </TouchableOpacity>
-        ) : (
-          <View />
-        )}
-      </View>
+      ) : (
+        <View />
+      )}
+      {active !== 'Digest' ? (
+        <TouchableOpacity
+          style={styles.touch}
+          onPress={() => navigation.navigate('Digest')}>
+          <Image style={styles.logo} source={p4} />
+        </TouchableOpacity>
+      ) : (
+        <View />
+      )}
+      {active !== 'Breathe' ? (
+        <TouchableOpacity
+          style={styles.touch}
+          onPress={() => navigation.navigate('Breathe')}>
+          <Image style={styles.logo} source={p5} />
+        </TouchableOpacity>
+      ) : (
+        <View />
+      )}
+      {active !== 'Circular' ? (
+        <TouchableOpacity
+          style={styles.touch}
+          onPress={() => navigation.navigate('Circular')}>
+          <Image style={styles.logo} source={p6} />
+        </TouchableOpacity>
+      ) : (
+        <View />
+      )}
+      {active !== 'Excret' ? (
+        <TouchableOpacity
+          style={styles.touch}
+          onPress={() => navigation.navigate('Excret')}>
+          <Image style={styles.logo} source={p7} />
+        </TouchableOpacity>
+      ) : (
+        <View />
+      )}
+      {active !== 'Percept' ? (
+        <TouchableOpacity
+          style={styles.touch}
+          onPress={() => navigation.navigate('Percept')}>
+          <Image style={styles.logo} source={p8} />
+        </TouchableOpacity>
+      ) : (
+        <View />
+      )}
     </View>
+    // </View>
   );
 };
 
@@ -66,18 +80,19 @@ const styles = StyleSheet.create({
   home: {
     justifyContent: 'center',
     alignItems: 'center',
-    height: 300,
+    height: '20%',
   },
   logo: {
-    height: 150,
-    width: 150,
-    resizeMode: 'center',
+    resizeMode: 'contain',
   },
   menu: {
-    width: '60%',
-    marginTop: 50,
+    // marginTop: 50,
+    maxWidth: '80%',
     flexDirection: 'row',
-    justifyContent: 'space-between',
+  },
+  touch: {
+    paddingHorizontal: '1%',
+    height: '80%',
   },
 });
 

@@ -14,7 +14,14 @@ const Home = ({navigation}) => {
     <View style={styles.Homes}>
       <Image style={styles.logo} source={p1} />
       <View style={styles.menu}>
-        <TouchableOpacity onPress={() => navigation.navigate('Guide')}>
+        <TouchableOpacity
+          style={{
+            width: '15%',
+            height: '70%',
+            marginTop: '5%',
+            marginRight: '5%',
+          }}
+          onPress={() => navigation.navigate('Guide')}>
           <Image style={styles.leftLogo} source={p2} />
         </TouchableOpacity>
         <View style={styles.innerMenu}>
@@ -71,10 +78,13 @@ const styles = StyleSheet.create({
   innerMenuRow: {
     flex: 1,
     flexDirection: 'row',
+    maxWidth: '30%',
+    padding: '1%',
+    maxHeight: '30%',
+    marginTop: '6%',
   },
   innerLogo: {
     flex: 1,
-    maxWidth: '33.33%',
     resizeMode: 'contain',
   },
 });
