@@ -80,15 +80,13 @@ const styles = StyleSheet.create({
   home: {
     justifyContent: 'center',
     alignItems: 'center',
-    height: '23%',
-    maxWidth: '80%',
   },
   logo: {
     resizeMode: 'contain',
   },
   menu: {
     maxWidth: '70%',
-    // marginHorizontal: '5%',
+    marginHorizontal: '5%',
     flexDirection: 'row',
   },
   touch: {
