@@ -1,5 +1,11 @@
 import React from 'react';
-import {View, StyleSheet, Image, TouchableOpacity} from 'react-native';
+import {
+  View,
+  StyleSheet,
+  Image,
+  TouchableOpacity,
+  TouchableHighlight,
+} from 'react-native';
 import p3 from '../../images/그림118.png';
 import p4 from '../../images/그림113.png';
 import p5 from '../../images/그림114.png';
@@ -12,11 +18,11 @@ const Tab = ({navigation, active}) => {
   return (
     <View style={styles.home}>
       <View style={styles.menu}>
-        <TouchableOpacity
+        <TouchableHighlight
           style={styles.touch}
           onPress={() => navigation.navigate('Home')}>
           <Image style={styles.logo} source={p112} />
-        </TouchableOpacity>
+        </TouchableHighlight>
         {active !== 'Bone' ? (
           <TouchableOpacity
             style={styles.touch}
@@ -63,13 +69,13 @@ const Tab = ({navigation, active}) => {
           <View />
         )}
         {active !== 'Circular' ? (
-            <TouchableOpacity
-                style={styles.touch}
-                onPress={() => navigation.navigate('Circular')}>
-              <Image style={styles.logo} source={p6} />
-            </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.touch}
+            onPress={() => navigation.navigate('Circular')}>
+            <Image style={styles.logo} source={p6} />
+          </TouchableOpacity>
         ) : (
-            <View />
+          <View />
         )}
       </View>
     </View>
@@ -91,8 +97,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   touch: {
-    width: '10%',
-    height: '10%',
+    // width: '10%',
+    // height: '10%',
     resizeMode: 'contain',
   },
 });
