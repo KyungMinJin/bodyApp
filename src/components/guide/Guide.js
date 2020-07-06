@@ -11,8 +11,6 @@ import p39 from '../../images/그림39.png';
 import p111 from '../../images/그림111.png';
 import Tab from '../common/Tab';
 
-var {width} = Dimensions.get('window');
-
 const Guide = ({navigation}) => {
   return (
     <View style={styles.homes}>
@@ -29,7 +27,7 @@ const Guide = ({navigation}) => {
           <Image source={p39} style={styles.balloon3} />
           <Image source={p50} style={styles.ui2} />
           <Image source={p51} style={styles.balloon2} />
-          <Image source={p52} style={styles.balloon2} />
+          <Image source={p52} style={styles.balloon4} />
         </View>
       </View>
 
@@ -40,41 +38,44 @@ const Guide = ({navigation}) => {
 
 const styles = StyleSheet.create({
   balloon: {
-    width: 350,
+    width: '55%',
     resizeMode: 'contain',
-    left: 340,
-    bottom: 450,
+    left: '35%',
+    bottom: '150%',
   },
   balloon2: {
-    width: 550,
+    width: '55%',
     resizeMode: 'contain',
-    left: 160,
-    bottom: 800,
+    left: '25%',
+    bottom: '170%',
   },
   balloon3: {
-    width: 650,
+    width: '65%',
     resizeMode: 'contain',
-    left: 130,
-    bottom: 800,
+    left: '13%',
+    bottom: '300%',
+  },
+  balloon4: {
+    width: '65%',
+    resizeMode: 'contain',
+    left: '20%',
+    bottom: '130%',
   },
   video: {
-    position: 'absolute',
-    left: 650,
-    bottom: 210,
+    left: '65%',
+    bottom: '95%',
   },
   vr: {
-    position: 'absolute',
-    left: 660,
-    bottom: 30,
+    left: '67%',
+    bottom: '95%',
   },
   ui: {
-    position: 'absolute',
-    left: 360,
-    bottom: 120,
+    left: '40%',
+    bottom: '52%',
   },
   ui2: {
-    left: 360,
-    bottom: 820,
+    left: '36%',
+    bottom: '102%',
   },
   main: {
     flex: 1,
@@ -87,11 +88,13 @@ const styles = StyleSheet.create({
   thumbnail: {
     width: '96%',
     marginHorizontal: 20,
+    height: '98%',
     resizeMode: 'contain',
   },
   homes: {
     backgroundColor: '#FFF2CC',
     flex: 1,
+    height: '80%',
   },
 });
 
