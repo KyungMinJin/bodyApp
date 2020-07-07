@@ -1,5 +1,5 @@
 import React from 'react';
-import {TouchableOpacity, View, StyleSheet, Image} from 'react-native';
+import {View, StyleSheet, Image, TouchableOpacity, Linking} from 'react-native';
 import p15 from '../../images/그림15.png';
 import p11 from '../../images/그림11.png';
 import p12 from '../../images/그림12.png';
@@ -51,11 +51,11 @@ const Bone4 = ({navigation}) => {
             <Image source={p15} style={styles.ui} />
           </TouchableOpacity>
           <View>
-            <TouchableOpacity>
-              <Image source={p11} style={styles.video} />
+            <TouchableOpacity style={styles.video} onPress={() => Linking.openURL('https://youtu.be/AMxIv1i33mI?list=PLhAwrROJB2fB7Zeinc59uMefi5PBh7PXi')}>
+              <Image source={p11}/>
             </TouchableOpacity>
-            <TouchableOpacity>
-              <Image source={p12} style={styles.vr} />
+            <TouchableOpacity style={styles.vr} onPress={() => Linking.openURL('https://youtu.be/YZy4HH4fXy4')}>
+              <Image source={p12} />
             </TouchableOpacity>
           </View>
         </View>
@@ -101,11 +101,11 @@ const styles = StyleSheet.create({
     borderRadius: 100,
   },
   video: {
-    top: '70%',
-    right: '105%',
+    top: '30%',
+    right: '100%',
   },
   vr: {
-    top: '70%',
+    top: '30%',
     right: '100%',
   },
   ui: {

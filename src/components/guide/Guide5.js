@@ -15,13 +15,13 @@ import p39 from '../../images/그림39.png';
 import p111 from '../../images/그림111.png';
 import Tab from '../common/Tab';
 
-const Guide = ({navigation}) => {
+const Guide5 = ({navigation}) => {
   let tabctn = 0;
-  let balloon_d = [1,0,0,0,0];
+  let balloon_d = [0,0,0,0,1];
   return (
     <View style={styles.homes}>
       <View style={styles.main}>
-        <TouchableOpacity style={styles.thumbContainer} onPress={() => navigation.navigate('Guide2')}>
+        <TouchableOpacity style={styles.thumbContainer} onPress={() => navigation.navigate('Home')}>
           <Image source={p9} style={styles.thumbnail} />
           <Image source={p50} style={styles.ui} />
           <Image source={p11} style={styles.video} />
@@ -141,4 +141,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Guide;
+export default Guide5;

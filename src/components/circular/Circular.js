@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, StyleSheet, Image, TouchableOpacity} from 'react-native';
+import {View, StyleSheet, Image, TouchableOpacity, Linking} from 'react-native';
 import p15 from '../../images/그림86.png';
 import p67 from '../../images/그림67.png';
 import p11 from '../../images/그림11.png';
@@ -35,10 +35,10 @@ const Circular = ({navigation}) => {
             <Image source={p67} style={{marginTop: -300, marginLeft: 30}} />
           </TouchableOpacity>
           <View>
-            <TouchableOpacity style={styles.video}>
+            <TouchableOpacity style={styles.video} onPress={() => Linking.openURL('https://youtu.be/zo1Y2RAhUmo?list=PLhAwrROJB2fB7Zeinc59uMefi5PBh7PXi')}>
               <Image source={p11} />
             </TouchableOpacity>
-            <TouchableOpacity style={styles.vr}>
+            <TouchableOpacity style={styles.vr} onPress={() => Linking.openURL('https://youtu.be/3V8YMnIcpkI')}>
               <Image source={p12} />
             </TouchableOpacity>
           </View>

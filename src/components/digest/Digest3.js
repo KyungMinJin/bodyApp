@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, StyleSheet, Image, TouchableOpacity} from 'react-native';
+import {View, StyleSheet, Image, TouchableOpacity, Linking} from 'react-native';
 import p15 from '../../images/그림120.png';
 import p11 from '../../images/그림11.png';
 import p12 from '../../images/그림12.png';
@@ -55,10 +55,10 @@ const Digest = ({navigation}) => {
             <Image source={p15} style={styles.ui} />
           </TouchableOpacity>
           <View>
-            <TouchableOpacity style={styles.video}>
+            <TouchableOpacity style={styles.video} onPress={() => Linking.openURL('https://youtu.be/AnmHhWsGQdA')}>
               <Image source={p11} />
             </TouchableOpacity>
-            <TouchableOpacity style={styles.vr}>
+            <TouchableOpacity style={styles.vr} onPress={() => Linking.openURL('https://youtu.be/r8-6Z1Efgzg')}>
               <Image source={p12} />
             </TouchableOpacity>
           </View>

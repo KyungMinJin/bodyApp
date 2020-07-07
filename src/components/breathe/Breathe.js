@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, StyleSheet, Image, TouchableOpacity} from 'react-native';
+import {View, StyleSheet, Image, TouchableOpacity, Linking} from 'react-native';
 import p15 from '../../images/그림68.png';
 import p67 from '../../images/그림67.png';
 import p11 from '../../images/그림11.png';
@@ -43,10 +43,10 @@ const Breathe = ({navigation}) => {
             <Image source={p67} style={{marginTop: -350, marginLeft: 30}} />
           </TouchableOpacity>
           <View>
-            <TouchableOpacity style={styles.video}>
+            <TouchableOpacity style={styles.video} onPress={() => Linking.openURL('https://youtu.be/tYTbbPSGIHk')}>
               <Image source={p11} />
             </TouchableOpacity>
-            <TouchableOpacity style={styles.vr}>
+            <TouchableOpacity style={styles.vr} onPress={() => Linking.openURL('https://youtu.be/kw9EJbezlK4')}>
               <Image source={p12} />
             </TouchableOpacity>
           </View>

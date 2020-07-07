@@ -13,6 +13,10 @@ import Breathe from './src/components/breathe/Breathe';
 import Circular from './src/components/circular/Circular';
 import Percept from './src/components/percept/Percept';
 import Guide from './src/components/guide/Guide';
+import Guide2 from './src/components/guide/Guide2';
+import Guide3 from './src/components/guide/Guide3';
+import Guide4 from './src/components/guide/Guide4';
+import Guide5 from './src/components/guide/Guide5';
 import Bone2 from './src/components/bone/Bone2';
 import Bone3 from './src/components/bone/Bone3';
 import Bone4 from './src/components/bone/Bone4';
@@ -39,6 +43,10 @@ function MainStack() {
     <Stack.Navigator headerMode="none">
       <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="Guide" component={Guide} />
+      <Stack.Screen name="Guide2" component={Guide2} />
+      <Stack.Screen name="Guide3" component={Guide3} />
+      <Stack.Screen name="Guide4" component={Guide4} />
+      <Stack.Screen name="Guide5" component={Guide5} />
       <Stack.Screen name="Digest" component={Digest} />
       <Stack.Screen name="Digest2" component={Digest2} />
       <Stack.Screen name="Digest3" component={Digest3} />
