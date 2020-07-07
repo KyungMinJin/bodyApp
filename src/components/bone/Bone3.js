@@ -102,19 +102,18 @@ const styles = StyleSheet.create({
     borderRadius: 100,
   },
   video: {
-    top: '30%',
-    right: '265%',
+    top: '70%',
+    right: '105%',
   },
   vr: {
-    top: '30%',
-    right: '260%',
+    top: '70%',
+    right: '100%',
   },
   ui: {
     resizeMode: 'contain',
     marginTop: 80,
-    marginLeft: 20,
     height: '80%',
-    marginRight: 10,
+    marginRight: 30,
   },
   homes: {
     backgroundColor: '#FFF2CC',
